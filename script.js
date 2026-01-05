@@ -27,12 +27,12 @@ function typeText(el) {
 }
 const music = document.getElementById("bgMusic");
 
-// Play music on first user interaction
-function startMusic() {
-  music.play();
-  document.removeEventListener("click", startMusic);
-  document.removeEventListener("touchstart", startMusic);
+function enableMusic() {
+  music.play().catch(() => {});
+  document.removeEventListener("click", enableMusic);
+  document.removeEventListener("touchstart", enableMusic);
 }
 
-document.addEventListener("click", startMusic);
-document.addEventListener("touchstart", startMusic);
+document.addEventListener("click", enableMusic);
+document.addEventListener("touchstart", enableMusic);
+
