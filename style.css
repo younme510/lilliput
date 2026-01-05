@@ -1,0 +1,47 @@
+h1 {
+  font-size: 3rem;   /* was ~2.4rem */
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+p {
+  font-size: 1.6rem;   /* larger, readable */
+  line-height: 1.9;
+  color: #334155;
+}
+.slide {
+  position: relative;
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Blurred background image */
+.slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("best.jpg") center / cover no-repeat;
+  filter: blur(18px) brightness(0.6);
+  z-index: 0;
+}
+
+/* Foreground content */
+.content {
+  position: relative;
+  z-index: 1;
+  background: rgba(255,255,255,0.85);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 650px;
+  text-align: center;
+}
+
+.content img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 16px;
+  margin-bottom: 15px;
+}
