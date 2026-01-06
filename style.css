@@ -23,10 +23,13 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("best.jpg") center / cover no-repeat;
-  filter: blur(18px) brightness(0.6);
+  background-image: var(--bg-img);
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px) brightness(0.6);
   z-index: 0;
 }
+
 
 /* Foreground content */
 .content {
@@ -76,4 +79,5 @@ p {
   max-width: 700px;
   text-align: center;
 }
+
 
