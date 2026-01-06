@@ -1,0 +1,82 @@
+h1 {
+  font-size: 3rem;   /* was ~2.4rem */
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+p {
+  font-size: 1.6rem;   /* larger, readable */
+  line-height: 1.9;
+  color: #334155;
+}
+.slide {
+  position: relative;
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Blurred background image */
+.slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--bg-img);
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px) brightness(0.6);
+  z-index: 0;
+}
+
+
+/* Foreground content */
+.content {
+  position: relative;
+  z-index: 1;
+  background: rgba(255,255,255,0.85);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 650px;
+  text-align: center;
+}
+
+.content img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 16px;
+  margin-bottom: 15px;
+}
+
+.slide {
+  position: relative;
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* blurred background layer */
+.slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px) brightness(0.6);
+  z-index: 0;
+}
+
+/* foreground card */
+.content {
+  position: relative;
+  z-index: 1;
+  background: rgba(255,255,255,0.88);
+  padding: 35px;
+  border-radius: 22px;
+  max-width: 700px;
+  text-align: center;
+}
+
