@@ -1,4 +1,9 @@
 const slides = document.querySelectorAll(".slide");
+// set background image for each slide
+document.querySelectorAll(".slide").forEach(slide => {
+  const bg = slide.getAttribute("data-bg");
+  slide.style.setProperty("--bg-img", `url('${bg}')`);
+});
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -35,4 +40,5 @@ function enableMusic() {
 
 document.addEventListener("click", enableMusic);
 document.addEventListener("touchstart", enableMusic);
+
 
