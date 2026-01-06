@@ -45,3 +45,35 @@ p {
   border-radius: 16px;
   margin-bottom: 15px;
 }
+
+.slide {
+  position: relative;
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* blurred background layer */
+.slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px) brightness(0.6);
+  z-index: 0;
+}
+
+/* foreground card */
+.content {
+  position: relative;
+  z-index: 1;
+  background: rgba(255,255,255,0.88);
+  padding: 35px;
+  border-radius: 22px;
+  max-width: 700px;
+  text-align: center;
+}
+
